@@ -16,7 +16,7 @@
             <NuxtLink class="link" to="/">login here</NuxtLink>
           </p>
         </div>
-        <RegisterForm @submit="register" :disabled="isLoading" :error="error" />
+        <RegisterForm :disabled="isLoading" :error="error" @submit="register" />
       </div>
     </Card>
   </div>

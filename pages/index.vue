@@ -28,5 +28,7 @@ definePageMeta({
   layout: "clean",
 });
 
-function login({ username, password }) {}
+function login({ username, password }) {
+  return { username, password };
+}
 </script>

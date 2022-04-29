@@ -4,7 +4,7 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["plugin:prettier/recommended"],
+  "extends": ["plugin:prettier/recommended", "plugin:vue/vue3-recommended"],
   "parserOptions": {
     "ecmaVersion": "latest",
     "parser": "@typescript-eslint/parser",
@@ -12,10 +12,7 @@
   },
   "plugins": ["vue", "@typescript-eslint"],
   "rules": {
-    "no-unused-vars": [
-      "error",
-      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
-    ],
+    "no-unused-vars": "off",
     "comma-dangle": [
       "error",
       {
@@ -26,12 +23,27 @@
         "functions": "never"
       }
     ],
+
     "prettier/prettier": [
       "error",
       {
         "endOfLine": "auto"
       }
     ],
-    "vue/multi-word-component-names": "off"
+
+    "vue/max-attributes-per-line": [
+      "warn",
+      {
+        "singleline": {
+          "max": 4
+        },
+        "multiline": {
+          "max": 1
+        }
+      }
+    ],
+    "vue/multi-word-component-names": "off",
+    "vue/html-self-closing": "off",
+    "vue/singleline-html-element-content-newline": "off"
   }
 }
